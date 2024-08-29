@@ -33,6 +33,23 @@ return {
 		})
 	end,
 	config = function()
-		require("focus").setup({})
+		require("focus").setup({
+			wk.add({
+				{
+					"|",
+					function()
+						require("focus").split_command("l")
+					end,
+					desc = "Split right",
+				},
+				{
+					"\\",
+					function()
+						require("focus").split_command("j")
+					end,
+					desc = "Split down",
+				},
+			}),
+		})
 	end,
 }
