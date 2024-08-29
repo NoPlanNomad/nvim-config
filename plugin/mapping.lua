@@ -1,0 +1,73 @@
+-- local map = function(m, l, r, desc, opts)
+-- 	opts = opts or { noremap = true, silent = true }
+-- 	desc = desc or nil
+-- 	opts.desc = desc
+-- 	vim.keymap.set(m, l, r, opts)
+-- end
+-- 
+-- local wk = require("which-key")
+-- 
+-- local vscode = nil
+-- if vim.g.vscode then
+-- 	print("VSCode detected, using VSCode mappings")
+-- 	vscode = require("vscode-neovim")
+-- end
+-- 
+-- -- Define different mappings for VSCode and Neovim
+-- local nvim_vscode = function(nvim_fn, vscode_fn, desc)
+-- 	if vim.g.vscode then
+-- 		return {
+-- 			vscode_fn,
+-- 			desc,
+-- 		}
+-- 	else
+-- 		return {
+-- 			nvim_fn,
+-- 			desc,
+-- 		}
+-- 	end
+-- end
+-- 
+-- -- Define mapping for only Neovim
+-- local nvim = function(nvim_fn, desc)
+-- 	if vim.g.vscode then
+-- 		return nil
+-- 	else
+-- 		return {
+-- 			nvim_fn,
+-- 			desc,
+-- 		}
+-- 	end
+-- end
+-- 
+-- local vscode_only = function(vscode_fn, desc)
+-- 	if vim.g.vscode then
+-- 		return {
+-- 			vscode_fn,
+-- 			desc,
+-- 		}
+-- 	else
+-- 		return nil
+-- 	end
+-- end
+-- 
+-- -- define the same mapping for neovim and vscode
+-- local either = function(cmd, desc)
+-- 	return {
+-- 		cmd,
+-- 		desc,
+-- 	}
+-- end
+-- 
+-- wk.add({
+-- 	-- ["|"] = nvim_vscode(function()
+-- 	-- require("focus").split_command("l")
+-- 	-- end, function()
+-- 	-- vscode.call("workbench.action.SplitEditorRight")
+-- 	-- end, "Split Right"),
+-- 	-- ["\\"] = nvim_vscode(function()
+-- 	-- require("focus").split_command("j")
+-- 	-- end, function()
+-- 	-- vscode.call("workbench.action.splitEditorDown")
+-- 	-- end, "Split down"),
+-- })
